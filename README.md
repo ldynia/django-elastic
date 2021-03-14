@@ -1,11 +1,11 @@
 # Description
 
-Plain django init project.
+Plain single node ElasticSearch project
 
 # Instructions
 
 ```bash
-$ docker-compose up
+$ docker run --name elasticsearch --rm -d -v es-data:/usr/share/elasticsearch/data -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.11.1
 ```
 
 # Elastic Search
